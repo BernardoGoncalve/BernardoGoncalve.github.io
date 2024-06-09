@@ -1104,3 +1104,28 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+/* Estiliza a largura da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Estiliza a área de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Estiliza o polegar da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Estiliza o polegar da barra de rolagem ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
