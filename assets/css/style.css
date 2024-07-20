@@ -1128,7 +1128,7 @@ section {
   background: #555;
 }
 
-.portfolio-wrap {
+/* .portfolio-wrap {
   position: relative;
   overflow: hidden;
 }
@@ -1141,11 +1141,11 @@ section {
   color: #fff;
   padding: 5px 10px;
   border-radius: 3px;
-  display: none; /* Inicialmente escondido */
+  display: none;
 }
 
 .portfolio-wrap:hover .portfolio-info {
-  display: block; /* Mostra ao fazer hover */
+  display: block; 
 }
 
 .portfolio-info h3 {
@@ -1156,5 +1156,5 @@ section {
 .portfolio-info p {
   margin: 0;
   font-size: 12px;
-}
+} */
 
