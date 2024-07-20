@@ -1128,12 +1128,12 @@ section {
   background: #555;
 }
 
-/* .portfolio-wrap {
+.portfolio-wrap {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-info {
+.portfolio-index-info {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -1144,17 +1144,16 @@ section {
   display: none;
 }
 
-.portfolio-wrap:hover .portfolio-info {
+.portfolio-wrap:hover .portfolio-index-info {
   display: block; 
 }
 
-.portfolio-info h3 {
+.portfolio-index-info h3 {
   margin: 0;
   font-size: 16px;
 }
 
-.portfolio-info p {
+.portfolio-index-info p {
   margin: 0;
   font-size: 12px;
-} */
-
+}
