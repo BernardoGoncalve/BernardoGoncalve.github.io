@@ -1,41 +1,58 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+require '../vendor/autoload.php';  // Ajuste o caminho conforme necessário
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+use \Mailjet\Resources;
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = htmlspecialchars($_POST['message']);
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+    // Configurações da API do Mailjet
+    $apiKey = '7f279028f2b9f95c0a7445e5db063a27';
+    $apiSecret = '88549da93104f2bfad7187ec3f08f6a5';
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+    $mj = new \Mailjet\Client($apiKey, $apiSecret, true, ['version' => 'v3.1']);
+    
+    $body = [
+        'Messages' => [
+            [
+                'From' => [
+                    'Email' => $email,
+                    'Name' => $name
+                ],
+                'To' => [
+                    [
+                        'Email' => 'bernardoprogramming@gmail.com',
+                        'Name' => 'Recipient Name'
+                    ]
+                ],
+                'Subject' => $subject,
+                'TextPart' => $message,
+                'HTMLPart' => "<h3>$subject</h3><p>$message</p>",
+                'CustomID' => 'AppGettingStartedTest'
+            ]
+        ]
+    ];
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+    try {
+        $response = $mj->post(Resources::$Email, ['body' => $body]);
 
-  echo $contact->send();
+        // Exibir a resposta completa para depuração
+        echo '<pre>';
+        print_r($response->getData());
+        echo '</pre>';
+
+        if ($response->success()) {
+            echo 'Sua mensagem foi enviada. Obrigado!';
+        } else {
+            echo 'A mensagem não pode ser enviada. Erro: ' . $response->getReasonPhrase() . ' - Código: ' . $response->getStatus();
+        }
+    } catch (Exception $e) {
+        echo 'Erro: ' . $e->getMessage();
+    }
+} else {
+    echo 'Método de solicitação inválido.';
+}
 ?>

@@ -1081,7 +1081,7 @@ section {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: auto;
   z-index: 9999;
   background: #040b14;
 }
@@ -1156,4 +1156,10 @@ section {
 .portfolio-index-info p {
   margin: 0;
   font-size: 12px;
+}
+
+@media (max-width: 991px) { /* Ajuste a largura do breakpoint conforme necessário */
+  #formdiv {
+      margin-top: 3rem;
+  }
 }
