@@ -452,7 +452,7 @@
             <div class="container">
                 <div class="row" data-aos="fade-in">
 
-                    <div class="col-lg-5 d-flex align-items-stretch">
+                    <div class="col-lg d-flex align-items-stretch">
                         <div class="info">
                             <div class="address">
                                 <i class="bi bi-geo-alt"></i>
@@ -481,7 +481,7 @@
 
                     </div>
 
-                    <div id="formdiv" class="col-lg-7 d-flex align-items-stretch">
+                    <!-- <div id="formdiv" class="col-lg-7 d-flex align-items-stretch">
                         <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
                             <div class="row gy-4">
                                 <div class="col-md-6">
@@ -508,7 +508,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -533,80 +533,6 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-        
-            // Pegue os valores dos campos do formulário
-            const name = document.getElementById('name-field').value;
-            const email = document.getElementById('email-field').value;
-            const subject = document.getElementById('subject-field').value;
-            const message = document.getElementById('message-field').value;
-        
-            // Configurações da API do Mailjet
-            const apiKey = '7f279028f2b9f95c0a7445e5db063a27';
-            const apiSecret = '88549da93104f2bfad7187ec3f08f6a5';
-        
-            const data = {
-                Messages: [
-                    {
-                        From: {
-                            Email: email,
-                            Name: name
-                        },
-                        To: [
-                            {
-                                Email: 'bernardoprogramming@gmail.com',
-                                Name: 'Recipient Name'
-                            }
-                        ],
-                        Subject: subject,
-                        TextPart: message,
-                        HTMLPart: `<h3>${subject}</h3><p>${message}</p>`,
-                        CustomID: 'AppGettingStartedTest'
-                    }
-                ]
-            };
-        
-            // Mostrar "Carregando"
-            document.querySelector('.loading').style.display = 'block';
-            document.querySelector('.error-message').style.display = 'none';
-            document.querySelector('.sent-message').style.display = 'none';
-        
-            // Enviar o pedido à API do Mailjet
-            fetch('https://api.mailjet.com/v3.1/send', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Basic ' + btoa(apiKey + ':' + apiSecret)
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(result => {
-                // Esconder "Carregando"
-                document.querySelector('.loading').style.display = 'none';
-                
-                if (result.Messages[0].Status === 'success') {
-                    // Mostrar mensagem de sucesso
-                    document.querySelector('.sent-message').style.display = 'block';
-                } else {
-                    // Mostrar mensagem de erro
-                    document.querySelector('.error-message').textContent = 'A mensagem não pode ser enviada. Erro: ' + result.Messages[0].Errors[0].ErrorMessage;
-                    document.querySelector('.error-message').style.display = 'block';
-                }
-            })
-            .catch(error => {
-                // Esconder "Carregando"
-                document.querySelector('.loading').style.display = 'none';
-                
-                // Mostrar mensagem de erro
-                document.querySelector('.error-message').textContent = 'Erro: ' + error.message;
-                document.querySelector('.error-message').style.display = 'block';
-            });
-        });
-        </script>
 
 </body>
 
