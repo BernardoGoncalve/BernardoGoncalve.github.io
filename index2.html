@@ -56,10 +56,10 @@
 
   <body>
     <!-- ======= Mobile nav toggle button ======= -->
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <!-- <i class="bi bi-list mobile-nav-toggle d-xl-none"></i> -->
 
     <!-- ======= Header ======= -->
-    <header id="header">
+    <!-- <header id="header">
       <div class="d-flex flex-column">
         <div class="profile">
           <img
@@ -70,8 +70,6 @@
             <a href="index.html">Bernardo Gonçalves</a>
           </h1>
           <div class="social-links mt-3 text-center">
-            <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
-            <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
             <a
               href="https://www.instagram.com/bernardoprogramming/"
               class="instagram"
@@ -122,10 +120,136 @@
             </li>
           </ul>
         </nav>
-        <!-- .nav-menu -->
       </div>
-    </header>
-    <!-- End Header -->
+    </header> -->
+
+    <!-- ======= Navbar ======= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <img
+                src="assets/img/profile-img.jpg"
+                alt="Bernardo Gonçalves"
+                class="rounded-circle"
+                style="width: 40px; height: 40px; margin-right: 10px" />
+              Bernardo Gonçalves
+            </a>
+            <ul class="navbar-nav ms-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://www.instagram.com/bernardoprogramming/"
+                  target="_blank"
+                  ><i class="bx bxl-instagram"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://www.linkedin.com/in/bernardo-gon%C3%A7alves-420413254/"
+                  target="_blank"
+                  ><i class="bx bxl-linkedin"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://github.com/BernardoGoncalve"
+                  target="_blank"
+                  ><i class="bx bxl-github"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Botão Toggle para dispositivos móveis -->
+        <button
+          id="buttonToggle"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links da Navbar -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <!-- <li class="nav-item">
+              <a class="nav-link active" href="#hero">
+                <i class="bx bx-home"></i>
+                Início</a
+              >
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#about">
+                <!-- <i class="bx bx-user"></i>  -->
+                Sobre</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">
+                <!-- <i class="bx bx-server"></i> -->
+                Skills</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#resume">
+                <i class="bx bx-file-blank"></i>
+                Experiência</a
+              >
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">
+                <!-- <i class="bx bx-book-content"></i> -->
+                Portfólio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">
+                <!-- <i class="bx bx-envelope"></i> -->
+                Contacto</a
+              >
+            </li>
+          </ul>
+          <!-- Links Sociais -->
+          <!-- <ul class="navbar-nav ms-3">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.instagram.com/bernardoprogramming/"
+                target="_blank"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.linkedin.com/in/bernardo-gon%C3%A7alves-420413254/"
+                target="_blank"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://github.com/BernardoGoncalve"
+                target="_blank"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Espaço para evitar sobreposição com conteúdo no topo -->
+    <!-- <div style="margin-top: 80px"></div> -->
 
     <!-- ======= Hero Section ======= -->
     <section
@@ -472,6 +596,16 @@
                       informação necessária para o bom funcionamento da
                       <a href="https://club.wellowgroup.com/">Wellow Club</a>
                     </p>
+                    <div class="justify-content-center">
+                      <ul style="list-style-type: none">
+                        <li>
+                          <strong>Cliente</strong>:
+                          <a href="https://wellowgroup.com/">Wellow Group</a>
+                        </li>
+                        <li><strong>Linguagem</strong>: PHP</li>
+                        <li><strong>Framework</strong>: Laravel</li>
+                      </ul>
+                    </div>
                     <!-- <a
                       href="#"
                       class="btn btn-outline-dark btn-lg"
@@ -479,7 +613,7 @@
                       aria-label="Website">
                       🌐
                     </a> -->
-                    <a
+                    <!-- <a
                       href="/wellow/portfolio-details.html"
                       class="btn btn-outline-dark btn-lg"
                       target="_blank"
@@ -487,9 +621,9 @@
                       <img
                         src="assets/img/more.png"
                         class="img-fluid"
-                        width="30px"
+                        width="20px"
                         alt="More Icon" />
-                    </a>
+                    </a>     -->
                   </div>
                 </div>
               </div>
@@ -540,6 +674,20 @@
                       e tem o objetivo de ser uma aplicação de gestão interna da
                       empresa.
                     </p>
+                    <div class="justify-content-center">
+                      <ul style="list-style-type: none">
+                        <li>
+                          <strong>Cliente</strong>:
+                          <a href="https://www.eclecticaleiloes.com/"
+                            >Ecléctica Leilões</a
+                          >
+                        </li>
+                        <li><strong>Linguagem</strong>: PHP</li>
+                        <li><strong>Framework</strong>: Laravel</li>
+                        <!-- <li><strong>Project date</strong>: 01 March, 2020</li> -->
+                        <!-- <li><strong>Link Demo</strong>: Em preparação</li> -->
+                      </ul>
+                    </div>
                     <a
                       href="https://demo.eclectica-app.com/"
                       class="btn btn-outline-dark btn-lg"
@@ -547,7 +695,7 @@
                       aria-label="Website">
                       🌐
                     </a>
-                    <a
+                    <!-- <a
                       href="/eclectica/portfolio-details.html"
                       class="btn btn-outline-dark btn-lg"
                       target="_blank"
@@ -555,9 +703,9 @@
                       <img
                         src="assets/img/more.png"
                         class="img-fluid"
-                        width="30px"
+                        width="20px"
                         alt="More Icon" />
-                    </a>
+                    </a> -->
                   </div>
                 </div>
               </div>
