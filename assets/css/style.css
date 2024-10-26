@@ -1157,3 +1157,9 @@ section {
   margin: 0;
   font-size: 12px;
 }
+
+@media (max-width: 991px) { /* Ajuste a largura do breakpoint conforme necessário */
+  #formdiv {
+      margin-top: 3rem;
+  }
+}
