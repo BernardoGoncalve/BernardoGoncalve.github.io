@@ -167,7 +167,7 @@ h6 {
   list-style: none;
 }
 
-.nav-menu>ul>li {
+.nav-menu > ul > li {
   position: relative;
   white-space: nowrap;
 }
@@ -193,7 +193,7 @@ h6 {
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
-.nav-menu li:hover>a {
+.nav-menu li:hover > a {
   text-decoration: none;
   color: #fff;
 }
@@ -201,7 +201,7 @@ h6 {
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
-.nav-menu li:hover>a i {
+.nav-menu li:hover > a i {
   color: #149ddd;
 }
 
@@ -494,6 +494,17 @@ section {
   margin-bottom: 10px;
 }
 
+.resume .resume-item h4 a {
+  color: #006affe7;
+  transition: none;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-decoration-line: none;
+}
+
 .resume .resume-item h5 {
   font-size: 16px;
   background: #e4edf9;
@@ -526,7 +537,6 @@ section {
   background: #fff;
   border: 2px solid #1f5297;
 }
-
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
@@ -611,7 +621,7 @@ section {
   background: rgba(20, 157, 221, 0.95);
 }
 
-.portfolio .portfolio-wrap .portfolio-links a+a {
+.portfolio .portfolio-wrap .portfolio-links a + a {
   border-left: 1px solid #37b3ed;
 }
 
@@ -644,7 +654,10 @@ section {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -652,7 +665,10 @@ section {
   border: 1px solid #149ddd;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #149ddd;
 }
 
@@ -675,7 +691,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -918,18 +934,18 @@ section {
   color: #fff;
 }
 
-.contact .php-email-form {
+.contact .emailForm {
   width: 100%;
   padding: 30px;
   background: #fff;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
-.contact .php-email-form .form-group {
+.contact .emailForm .form-group {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .validate {
+.contact .emailForm .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -937,7 +953,7 @@ section {
   font-size: 13px;
 }
 
-.contact .php-email-form .error-message {
+.contact .emailForm .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -946,11 +962,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .emailForm .error-message br + br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.contact .emailForm .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -959,14 +975,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .emailForm .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .emailForm .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -978,30 +994,30 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form .form-group {
+.contact .emailForm .form-group {
   margin-bottom: 15px;
 }
 
-.contact .php-email-form label {
+.contact .emailForm label {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .emailForm input,
+.contact .emailForm textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact .php-email-form input {
+.contact .emailForm input {
   height: 44px;
 }
 
-.contact .php-email-form textarea {
+.contact .emailForm textarea {
   padding: 10px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .emailForm button[type="submit"] {
   background: #149ddd;
   border: 0;
   padding: 10px 24px;
@@ -1010,7 +1026,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .emailForm button[type="submit"]:hover {
   background: #37b3ed;
 }
 
@@ -1046,11 +1062,11 @@ section {
   font-size: 15px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #0e2442;
@@ -1145,7 +1161,7 @@ section {
 }
 
 .portfolio-wrap:hover .portfolio-index-info {
-  display: block; 
+  display: block;
 }
 
 .portfolio-index-info h3 {
@@ -1158,8 +1174,54 @@ section {
   font-size: 12px;
 }
 
-@media (max-width: 991px) { /* Ajuste a largura do breakpoint conforme necessário */
+@media (max-width: 991px) {
+  /* Ajuste a largura do breakpoint conforme necessário */
   #formdiv {
-      margin-top: 3rem;
+    margin-top: 3rem;
+  }
+}
+/* Estilo geral do indicador de scroll */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px; /* Ajuste conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Estilo do mouse */
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animação do ponto no interior do mouse */
+.scroll {
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: scroll 2s infinite;
+}
+
+/* Animação de subir e descer */
+@keyframes scroll {
+  0% {
+    top: 5px;
+    opacity: 1;
+  }
+  50% {
+    top: 35px;
+    opacity: 0.5;
+  }
+  100% {
+    top: 5px;
+    opacity: 1;
   }
 }
