@@ -830,13 +830,15 @@
         const prefersDarkScheme = window.matchMedia(
           "(prefers-color-scheme: dark)"
         ).matches;
-
+        console.log(prefersDarkScheme);
         // Define o tema inicial com base na preferência do sistema
         if (prefersDarkScheme) {
           document.documentElement.classList.add("dark-mode");
           themeSwitch.checked = true;
           document.body.classList.add("bg-dark", "text-white");
-        } else {
+        }
+        if (!prefersDarkScheme) {
+          document.body.classList.remove("bg-dark", "text-white");
           document.body.classList.add("bg-light");
         }
 
