@@ -14,6 +14,28 @@ body {
   color: #272829;
 }
 
+body.bg-light {
+  color: #272829;
+  .skills {
+    background-color: #eeeded;
+    color: #050d18;
+  }
+  .portfolio {
+    background-color: #eeeded;
+  }
+}
+
+body.bg-dark {
+  color: #fff;
+  .skills {
+    background-color: rgb(34, 34, 34);
+    color: #eeeded;
+  }
+  .portfolio {
+    background-color: rgb(34, 34, 34);
+  }
+}
+
 a {
   color: #149ddd;
   text-decoration: none;
@@ -446,7 +468,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  /* color: #050d18; */
 }
 
 .skills .progress .skill .val {
@@ -474,7 +496,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  /* color: #050d18; */
 }
 
 .resume .resume-item {
@@ -490,7 +512,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  /* color: #050d18; */
   margin-bottom: 10px;
 }
 
@@ -507,7 +529,7 @@ section {
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  /* background: #e4edf9; */
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -544,7 +566,7 @@ section {
   margin-bottom: 30px;
 }
 
-.portfolio #portfolio-flters {
+.portfolio #portfolio-filters {
   padding: 0;
   margin: 0 auto 35px auto;
   list-style: none;
@@ -554,7 +576,7 @@ section {
   padding: 2px 15px;
 }
 
-.portfolio #portfolio-flters li {
+.portfolio #portfolio-filters li {
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px 8px 15px;
@@ -567,12 +589,12 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-filters li:hover,
+.portfolio #portfolio-filters li.filter-active {
   color: #149ddd;
 }
 
-.portfolio #portfolio-flters li:last-child {
+.portfolio #portfolio-filters li:last-child {
   margin-right: 0;
 }
 
@@ -865,7 +887,7 @@ section {
 
 .contact .info {
   padding: 30px;
-  background: #fff;
+  /* background: #fff; */
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
@@ -889,14 +911,14 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #050d18;
+  /* color: #050d18; */
 }
 
 .contact .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #173b6c;
+  /* color: #173b6c; */
 }
 
 .contact .info .email p {
