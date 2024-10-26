@@ -39,16 +39,37 @@
         font-size: 1.2rem;
         color: #666;
       }
+      #containerMessage {
+        text-align: center;
+        padding: 20px;
+        background-color: #666;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      #containerMessage img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      #containerMessage h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+      #containerMessage p {
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        color: #666;
+      }
     </style>
   </head>
-  <body>
-    <div class="container">
+  <body class="bg-dark">
+    <div id="containerMessage" class="container text-center">
       <img
         src="assets/img/profile-img.jpg"
         class="img-fluid rounded-circle"
         alt="Em Manutenção" />
-      <h1>Estamos em Manutenção</h1>
-      <p>
+      <h1 class="text-white">Estamos em Manutenção</h1>
+      <p class="text-white">
         O site estará disponível novamente em breve. Obrigado pela sua
         compreensão!
       </p>
