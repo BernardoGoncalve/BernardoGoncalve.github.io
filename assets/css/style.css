@@ -34,6 +34,9 @@ body.bg-dark {
   .portfolio {
     background-color: rgb(34, 34, 34);
   }
+  .contact .info {
+    background-color: rgb(51, 50, 50);
+  }
 }
 
 a {
