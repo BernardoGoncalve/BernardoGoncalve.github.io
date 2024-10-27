@@ -23,6 +23,9 @@ body.bg-light {
   .portfolio {
     background-color: #eeeded;
   }
+  .portfolio #portfolio-filters {
+    background-color: #fff;
+  }
 }
 
 body.bg-dark {
@@ -36,6 +39,19 @@ body.bg-dark {
   }
   .contact .info {
     background-color: rgb(51, 50, 50);
+  }
+
+  .portfolio #portfolio-filters {
+    background-color: rgb(51, 50, 50);
+    color: white;
+  }
+
+  .card {
+    background-color: rgb(51, 50, 50);
+    color: white;
+  }
+  .card .card-body {
+    color: white;
   }
 }
 
@@ -574,7 +590,7 @@ section {
   margin: 0 auto 35px auto;
   list-style: none;
   text-align: center;
-  background: #fff;
+  /* background: #fff; */
   border-radius: 50px;
   padding: 2px 15px;
 }
@@ -587,7 +603,7 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #272829;
+  /* color: #272829; */
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
