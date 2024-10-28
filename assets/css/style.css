@@ -26,6 +26,10 @@ body.bg-light {
   .portfolio #portfolio-filters {
     background-color: #fff;
   }
+
+  .section-title h2 {
+    color: #173b6c;
+  }
 }
 
 body.bg-dark {
@@ -53,6 +57,11 @@ body.bg-dark {
   .card .card-body {
     color: white;
   }
+}
+
+.card a {
+  text-decoration-line: none;
+  /* color: green; */
 }
 
 a {
@@ -168,9 +177,9 @@ h6 {
   text-decoration: none;
 }
 
-/* #main {
+#main {
   margin-left: 300px;
-} */
+}
 
 .container,
 .container-fluid {
@@ -366,7 +375,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  /* color: #173b6c; */
 }
 
 .section-title h2::after {
