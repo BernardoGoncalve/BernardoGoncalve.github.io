@@ -359,6 +359,9 @@ h6 {
     line-height: 24px;
     margin-bottom: 30px;
   }
+  .email-item {
+    display: block !important;
+  }
 }
 
 /*--------------------------------------------------------------
