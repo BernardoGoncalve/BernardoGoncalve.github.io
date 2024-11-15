@@ -17,11 +17,11 @@ body {
 body.bg-light {
   color: #272829;
   .skills {
-    background-color: #eeeded;
+    background-color: #c4c4c4;
     color: #050d18;
   }
   .portfolio {
-    background-color: #eeeded;
+    background-color: #c4c4c4;
   }
   .portfolio #portfolio-filters {
     background-color: #fff;
