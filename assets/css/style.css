@@ -209,6 +209,15 @@ h6 {
     padding-left: 12px;
     padding-right: 12px;
   }
+  .email-item {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1072px) {
+  .email-item {
+    display: block !important;
+  }
 }
 
 /*--------------------------------------------------------------
